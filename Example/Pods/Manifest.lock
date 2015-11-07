@@ -1,0 +1,14 @@
+PODS:
+  - ADPPhotoPicker (0.1.0)
+
+DEPENDENCIES:
+  - ADPPhotoPicker (from `../`)
+
+EXTERNAL SOURCES:
+  ADPPhotoPicker:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  ADPPhotoPicker: 351f42dca3d78048c0fad5bc8a7be6869367d91a
+
+COCOAPODS: 0.38.2

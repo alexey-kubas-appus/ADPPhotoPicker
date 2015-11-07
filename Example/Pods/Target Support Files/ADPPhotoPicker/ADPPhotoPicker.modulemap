@@ -1,0 +1,6 @@
+framework module ADPPhotoPicker {
+  umbrella header "ADPPhotoPicker-umbrella.h"
+
+  export *
+  module * { export * }
+}
