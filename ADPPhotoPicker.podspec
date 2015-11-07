@@ -19,7 +19,7 @@ Pod::Spec.new do |s|
   s.description      = <<-DESC
                        DESC
 
-  s.homepage         = "https://github.com/<GITHUB_USERNAME>/ADPPhotoPicker"
+  s.homepage         = "https://github.com/alexey-kubas-appus/ADPPhotoPicker.git"
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "/Users/dmitry.pashinskiy/Desktop/ForFrameworks/Example/.git/config" => "dmitry.pashinskiy@appus.me" }
