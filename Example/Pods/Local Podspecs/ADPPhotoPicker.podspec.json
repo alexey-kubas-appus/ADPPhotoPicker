@@ -1,15 +1,15 @@
 {
   "name": "ADPPhotoPicker",
   "version": "0.1.0",
-  "summary": "A short description of ADPPhotoPicker.",
-  "description": "",
-  "homepage": "https://github.com/<GITHUB_USERNAME>/ADPPhotoPicker",
+  "summary": "Photo picker, based on model Photos",
+  "description": "Picker that allows you to take photos from gallery.",
+  "homepage": "https://github.com/alexey-kubas-appus/ADPPhotoPicker.git",
   "license": "MIT",
   "authors": {
     "/Users/dmitry.pashinskiy/Desktop/ForFrameworks/Example/.git/config": "dmitry.pashinskiy@appus.me"
   },
   "source": {
-    "git": "https://github.com/<GITHUB_USERNAME>/ADPPhotoPicker.git",
+    "git": "https://github.com/alexey-kubas-appus/ADPPhotoPicker.git",
     "tag": "0.1.0"
   },
   "platforms": {
@@ -17,9 +17,8 @@
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",
-  "resource_bundles": {
-    "ADPPhotoPicker": [
-      "Pod/Assets/*.png"
-    ]
-  }
+  "resources": [
+    "Pod/Assets/*.png",
+    "Pod/Assets/*.xib"
+  ]
 }

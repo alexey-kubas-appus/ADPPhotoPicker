@@ -30,7 +30,7 @@ Pod::Spec.new do |s|
 
   s.source_files = 'Pod/Classes/**/*'
 # s.resource_bundles = {
-#    'ADPPhotoPicker' => ['Pod/Assets/*.png',
+#    'Resources' => ['Pod/Assets/*.png',
 #                         'Pod/Assets/*.xib']
 #  }
   s.resources = ['Pod/Assets/*.png',
