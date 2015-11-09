@@ -9,16 +9,20 @@
     "/Users/dmitry.pashinskiy/Desktop/ForFrameworks/Example/.git/config": "dmitry.pashinskiy@appus.me"
   },
   "source": {
-    "git": "https://github.com/alexey-kubas-appus/ADPPhotoPicker.git"
+    "git": "https://github.com/alexey-kubas-appus/ADPPhotoPicker.git",
+    "tag": "0.1.0"
   },
   "platforms": {
     "ios": "8.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*.{h,swift}",
+  "source_files": "Pod/Classes/**/*",
   "resource_bundles": {
     "Resources": [
-      "Pod/Assets/*.{png,xib}"
+      "Pod/Assets/**/*"
     ]
-  }
+  },
+  "resources": [
+    "Pod/Assets/**/*"
+  ]
 }
