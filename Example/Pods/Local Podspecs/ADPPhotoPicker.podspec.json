@@ -9,8 +9,7 @@
     "/Users/dmitry.pashinskiy/Desktop/ForFrameworks/Example/.git/config": "dmitry.pashinskiy@appus.me"
   },
   "source": {
-    "git": "https://github.com/alexey-kubas-appus/ADPPhotoPicker.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/alexey-kubas-appus/ADPPhotoPicker.git"
   },
   "platforms": {
     "ios": "8.0"
