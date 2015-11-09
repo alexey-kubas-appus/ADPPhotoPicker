@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ADPPhotoPicker"
-  s.version          = "0.1.0"
+  s.version          = "0.1.3"
   s.summary          = "Photo picker, based on model Photos"
 
 # This description is used to generate tags and improve search results.
