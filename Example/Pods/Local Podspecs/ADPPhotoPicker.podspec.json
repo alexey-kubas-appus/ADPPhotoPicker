@@ -15,13 +15,10 @@
     "ios": "8.0"
   },
   "requires_arc": true,
-  "source_files": "Pod/Classes/**/*",
+  "source_files": "Pod/Classes/**/*.{h,swift}",
   "resource_bundles": {
     "Resources": [
-      "Pod/Assets/**/*"
+      "Pod/Assets/*.{png,xib}"
     ]
-  },
-  "resources": [
-    "Pod/Assets/**/*"
-  ]
+  }
 }
