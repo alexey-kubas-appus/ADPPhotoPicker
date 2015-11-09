@@ -8,7 +8,7 @@
 
 Pod::Spec.new do |s|
   s.name             = "ADPPhotoPicker"
-  s.version          = "0.1.1"
+  s.version          = "0.1.0"
   s.summary          = "Photo picker, based on model Photos"
 
 # This description is used to generate tags and improve search results.
@@ -22,7 +22,7 @@ Pod::Spec.new do |s|
   # s.screenshots     = "www.example.com/screenshots_1", "www.example.com/screenshots_2"
   s.license          = 'MIT'
   s.author           = { "/Users/dmitry.pashinskiy/Desktop/ForFrameworks/Example/.git/config" => "dmitry.pashinskiy@appus.me" }
-  s.source           = { :git => "https://github.com/alexey-kubas-appus/ADPPhotoPicker.git" }
+s.source           = { :git => "https://github.com/alexey-kubas-appus/ADPPhotoPicker.git" :tag => s.version.to_s }
   # s.social_media_url = 'https://twitter.com/<TWITTER_USERNAME>'
 
   s.platform     = :ios, '8.0'
