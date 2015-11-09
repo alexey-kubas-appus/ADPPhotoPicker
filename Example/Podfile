@@ -3,6 +3,6 @@ use_frameworks!
 
 target 'ADPPhotoPicker_Example', :exclusive => true do
     #pod "ADPPhotoPicker", :path => "../"
-    pod 'ADPPhotoPicker'
-    #pod 'ADPPhotoPicker', :git => 'https://github.com/alexey-kubas-appus/ADPPhotoPicker.git'
+    #pod 'ADPPhotoPicker'
+    pod 'ADPPhotoPicker', :git => 'https://github.com/alexey-kubas-appus/ADPPhotoPicker.git'
 end

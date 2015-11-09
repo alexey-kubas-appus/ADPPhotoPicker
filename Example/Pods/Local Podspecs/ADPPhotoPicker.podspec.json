@@ -1,6 +1,6 @@
 {
   "name": "ADPPhotoPicker",
-  "version": "0.1.0",
+  "version": "0.1.3",
   "summary": "Photo picker, based on model Photos",
   "description": "Picker that allows you to take photos from gallery.",
   "homepage": "https://github.com/alexey-kubas-appus/ADPPhotoPicker.git",
@@ -10,7 +10,7 @@
   },
   "source": {
     "git": "https://github.com/alexey-kubas-appus/ADPPhotoPicker.git",
-    "tag": "0.1.0"
+    "tag": "0.1.3"
   },
   "platforms": {
     "ios": "8.0"

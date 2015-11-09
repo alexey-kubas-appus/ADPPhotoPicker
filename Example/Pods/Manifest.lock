@@ -2,7 +2,16 @@ PODS:
   - ADPPhotoPicker (0.1.3)
 
 DEPENDENCIES:
-  - ADPPhotoPicker
+  - ADPPhotoPicker (from `https://github.com/alexey-kubas-appus/ADPPhotoPicker.git`)
+
+EXTERNAL SOURCES:
+  ADPPhotoPicker:
+    :git: https://github.com/alexey-kubas-appus/ADPPhotoPicker.git
+
+CHECKOUT OPTIONS:
+  ADPPhotoPicker:
+    :commit: 5dc556dbbaadbbdc581440016712ebf289312620
+    :git: https://github.com/alexey-kubas-appus/ADPPhotoPicker.git
 
 SPEC CHECKSUMS:
   ADPPhotoPicker: 311a9fa694235800b0c774c6d4974d6f19609e2b
