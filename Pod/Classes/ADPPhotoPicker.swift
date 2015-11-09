@@ -14,7 +14,7 @@ let CellIdentifier = "ADPPhotoCellIdentifier"
 let PhotoPickerNibName = "ADPPhotoPickerView"
 
 
-@objc protocol ADPPhotoPickerDelegate {
+@objc public protocol ADPPhotoPickerDelegate {
     
     /// after Done button will be tapped, this method will send array of **PHAsset**
     func photoPicker(photoPicker: ADPPhotoPicker, didEndSelectingImageAssets assets: [PHAsset]?)
@@ -25,43 +25,43 @@ let PhotoPickerNibName = "ADPPhotoPickerView"
 }
 
 
-class ADPPhotoPicker: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
+public class ADPPhotoPicker: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {
     
-    @IBOutlet weak var collectionView: UICollectionView!
-    @IBOutlet weak var topBarView: UIView!
+    @IBOutlet private weak var collectionView: UICollectionView!
+    @IBOutlet private weak var topBarView: UIView!
     
     private var assetsFetchResults: PHFetchResult!
     private let imageManager: PHCachingImageManager = PHCachingImageManager()
     private var selectedIndexPaths: Set<NSIndexPath>! = Set()
     
     
-    var delegate: ADPPhotoPickerDelegate?
+    public var delegate: ADPPhotoPickerDelegate?
     
     /// Width of collection view will be automatically configured for this value. **Default 4**
-    var cellsCountInRow: UInt = 4
+    public var cellsCountInRow: UInt = 4
     
     /// Space for cells between cells and bounds in superview (`collectionView`). **Default 5**
-    var spaceInset: CGFloat = 5
+    public var spaceInset: CGFloat = 5
     
     /// background color for `collectionView`. **Default whiteColor**
-    var backgroundColor = UIColor.whiteColor()
+    public var backgroundColor = UIColor.whiteColor()
     
     /// topBar background color. **Default lightGray**
-    var topBarColor = UIColor(red:0.83, green:0.83, blue:0.83, alpha:1)
+    public var topBarColor = UIColor(red:0.83, green:0.83, blue:0.83, alpha:1)
     
     /// contentMode for each *imageView* in cells. **Default AspectFit**
-    var contentMode = PHImageContentMode.AspectFit
+    public var contentMode = PHImageContentMode.AspectFit
     
     /// target size for images which will be received from PHAssets. **Defautlt CGSizeMake(100, 100)**
-    var imageSize = CGSizeMake(100, 100)
+    public var imageSize = CGSizeMake(100, 100)
     
     
     class func photoPicker() -> ADPPhotoPicker{
         return ADPPhotoPicker(nibName: PhotoPickerNibName, bundle: NSBundle.mainBundle())
     }
     
-//MARK: - UIViewController
-    override func viewDidLoad() {
+    //MARK: - UIViewController
+    override public func viewDidLoad() {
         super.viewDidLoad()
         
         self.defaultsInit()
@@ -73,12 +73,12 @@ class ADPPhotoPicker: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     
-//MARK: - UICollectionViewDataSource
-    func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+    //MARK: - UICollectionViewDataSource
+    public func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return assetsFetchResults.count
     }
-
-    func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
+    
+    public func collectionView(collectionView: UICollectionView, cellForItemAtIndexPath indexPath: NSIndexPath) -> UICollectionViewCell {
         let cell: ADPPhotoCell = collectionView.dequeueReusableCellWithReuseIdentifier(CellIdentifier, forIndexPath: indexPath) as! ADPPhotoCell
         
         
@@ -96,8 +96,8 @@ class ADPPhotoPicker: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     
-//MARK: - UICollectionViewDelegate
-    func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
+    //MARK: - UICollectionViewDelegate
+    public func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath: NSIndexPath) {
         let isSelected = self.selectedIndexPaths.contains(indexPath)
         // update dataSource of indexPaths
         if  isSelected {
@@ -112,8 +112,8 @@ class ADPPhotoPicker: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     
-//MARK: - UICollectionViewDelegateFlowLayout
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
+    //MARK: - UICollectionViewDelegateFlowLayout
+    public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAtIndexPath indexPath: NSIndexPath) -> CGSize {
         let screenWidth = UIScreen.mainScreen().bounds.size.width
         
         let countOfSpaceLines = CGFloat(self.cellsCountInRow + 1)  // count of space lines always bigger on 1.
@@ -127,7 +127,7 @@ class ADPPhotoPicker: UIViewController, UICollectionViewDelegate, UICollectionVi
         return CGSizeMake(cellWidth, cellWidth)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
+    public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, insetForSectionAtIndex section: Int) -> UIEdgeInsets {
         let inset = self.spaceInset
         return UIEdgeInsets(top: inset,
             left: inset,
@@ -135,16 +135,16 @@ class ADPPhotoPicker: UIViewController, UICollectionViewDelegate, UICollectionVi
             right: inset)
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
+    public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAtIndex section: Int) -> CGFloat {
         return self.spaceInset
     }
     
-    func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
+    public func collectionView(collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAtIndex section: Int) -> CGFloat {
         return self.spaceInset
     }
     
-//MARK: - Actions, Selectors
-
+    //MARK: - Actions, Selectors
+    
     @IBAction private func didTappedDoneButton(sender: UIButton) {
         
         let selectedAssets = self.getSelectedAssets()
@@ -161,8 +161,8 @@ class ADPPhotoPicker: UIViewController, UICollectionViewDelegate, UICollectionVi
     }
     
     
-//MARK: - Private Methods
-
+    //MARK: - Private Methods
+    
     /// set default configuration to class
     private func defaultsInit() {
         self.collectionView.backgroundColor = self.backgroundColor
@@ -175,9 +175,9 @@ class ADPPhotoPicker: UIViewController, UICollectionViewDelegate, UICollectionVi
         let cellNib = UINib(nibName: "ADPPhotoCell", bundle: nil)
         self.collectionView.registerNib(cellNib, forCellWithReuseIdentifier: CellIdentifier)
     }
-/**
+    /**
     Fetch all Images as **PHAssets** from device
-*/
+    */
     private func updateDataSource() {
         let fetchOptions = PHFetchOptions()
         fetchOptions.sortDescriptors = [ NSSortDescriptor(key: "creationDate", ascending: true) ]

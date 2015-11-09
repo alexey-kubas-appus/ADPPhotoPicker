@@ -1,10 +1,10 @@
 PODS:
-  - ADPPhotoPicker (0.1.0)
+  - ADPPhotoPicker (0.1.3)
 
 DEPENDENCIES:
-  - ADPPhotoPicker (~> 0.1.0)
+  - ADPPhotoPicker
 
 SPEC CHECKSUMS:
-  ADPPhotoPicker: 680c6e50d5a5a1de53fba9701faa8cffa4596880
+  ADPPhotoPicker: 311a9fa694235800b0c774c6d4974d6f19609e2b
 
 COCOAPODS: 0.38.2
