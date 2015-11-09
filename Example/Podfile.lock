@@ -9,6 +9,6 @@ EXTERNAL SOURCES:
     :path: "../"
 
 SPEC CHECKSUMS:
-  ADPPhotoPicker: b9b957caec8d23ec38627c06feadf9e7149ff912
+  ADPPhotoPicker: 96dccae3ccd79c9d1d0e337fafe6a237626d9d00
 
 COCOAPODS: 0.38.2

@@ -17,8 +17,12 @@
   },
   "requires_arc": true,
   "source_files": "Pod/Classes/**/*",
+  "resource_bundles": {
+    "Resources": [
+      "Pod/Assets/**/*"
+    ]
+  },
   "resources": [
-    "Pod/Assets/*.png",
-    "Pod/Assets/*.xib"
+    "Pod/Assets/**/*"
   ]
 }
