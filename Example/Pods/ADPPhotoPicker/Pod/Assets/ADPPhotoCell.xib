@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="ASm-yV-UML" customClass="ADPPhotoCell" customModule="ADPPhotoPicker" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="BiW-Dp-p59" userLabel="ImageView">
+                    <rect key="frame" x="0.0" y="0.0" width="100" height="100"/>
+                </imageView>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="check_icon" translatesAutoresizingMaskIntoConstraints="NO" id="aaq-ZC-wJG" userLabel="checkBox">
+                    <rect key="frame" x="75" y="5" width="20" height="20"/>
+                    <constraints>
+                        <constraint firstAttribute="width" secondItem="aaq-ZC-wJG" secondAttribute="height" multiplier="1:1" id="FC6-eH-C62"/>
+                        <constraint firstAttribute="height" constant="20" id="Hyj-Zi-k22"/>
+                    </constraints>
+                </imageView>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="aaq-ZC-wJG" firstAttribute="top" secondItem="ASm-yV-UML" secondAttribute="top" constant="5" id="CwS-0j-dft"/>
+                <constraint firstAttribute="bottom" secondItem="BiW-Dp-p59" secondAttribute="bottom" id="VZ7-2T-KbZ"/>
+                <constraint firstAttribute="trailing" secondItem="BiW-Dp-p59" secondAttribute="trailing" id="WHS-nD-yAw"/>
+                <constraint firstItem="BiW-Dp-p59" firstAttribute="leading" secondItem="ASm-yV-UML" secondAttribute="leading" id="aQp-WJ-0a4"/>
+                <constraint firstAttribute="trailing" secondItem="aaq-ZC-wJG" secondAttribute="trailing" constant="5" id="nEN-Ec-ctC"/>
+                <constraint firstItem="BiW-Dp-p59" firstAttribute="top" secondItem="ASm-yV-UML" secondAttribute="top" id="oGL-4z-Sco"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="checkBoxImageView" destination="aaq-ZC-wJG" id="boX-4i-fNF"/>
+                <outlet property="imageView" destination="BiW-Dp-p59" id="x5H-j2-sDV"/>
+            </connections>
+            <point key="canvasLocation" x="361" y="368"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="check_icon" width="34" height="34"/>
+    </resources>
+</document>
