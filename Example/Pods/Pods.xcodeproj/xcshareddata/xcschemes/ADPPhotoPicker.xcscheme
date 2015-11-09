@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "A1774570F8A1C469528837FB"
+               BlueprintIdentifier = "C732E8F810583074F002A97A"
                BuildableName = "ADPPhotoPicker.framework"
                BlueprintName = "ADPPhotoPicker"
                ReferencedContainer = "container:Pods.xcodeproj">

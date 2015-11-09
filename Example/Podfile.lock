@@ -2,13 +2,9 @@ PODS:
   - ADPPhotoPicker (0.1.0)
 
 DEPENDENCIES:
-  - ADPPhotoPicker (from `../`)
-
-EXTERNAL SOURCES:
-  ADPPhotoPicker:
-    :path: "../"
+  - ADPPhotoPicker (~> 0.1.0)
 
 SPEC CHECKSUMS:
-  ADPPhotoPicker: 96dccae3ccd79c9d1d0e337fafe6a237626d9d00
+  ADPPhotoPicker: 680c6e50d5a5a1de53fba9701faa8cffa4596880
 
 COCOAPODS: 0.38.2
