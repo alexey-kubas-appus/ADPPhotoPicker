@@ -1,5 +1,6 @@
 # ADPPhotoPicker
 
+Made by [![Appus Studio](https://github.com/alexey-kubas-appus/ADPPhotoPicker/blob/master/appus.png)](https://appus.software)
 
 [![CI Status](http://img.shields.io/travis//Users/dmitry.pashinskiy/Desktop/ForFrameworks/Example/.git/config/ADPPhotoPicker.svg?style=flat)](https://travis-ci.org//Users/dmitry.pashinskiy/Desktop/ForFrameworks/Example/.git/config/ADPPhotoPicker)
 [![Version](https://img.shields.io/cocoapods/v/ADPPhotoPicker.svg?style=flat)](http://cocoapods.org/pods/ADPPhotoPicker)
@@ -23,7 +24,7 @@ pod "ADPPhotoPicker"
 
 ## Author
 
-/Users/dmitry.pashinskiy/Desktop/ForFrameworks/Example/.git/config, dmitry.pashinskiy@appus.me
+Dmitry Pashinskiy, [Appus Studio](https://appus.software)
 
 ## License
 
